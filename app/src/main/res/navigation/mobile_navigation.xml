@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.idcamp2020.made.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_favorite"
+        android:name="com.idcamp2020.made.favorite.favorite.FavoriteFragment"
+        android:label="@string/menu_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_nav_favorite_to_nav_detail"
+            app:destination="@id/nav_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.idcamp2020.made.ui.setting.SettingFragment"
+        android:label="@string/action_settings"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.idcamp2020.made.ui.detail.DetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
